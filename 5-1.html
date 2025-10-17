@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*seletor universal - seleciona todas as teags existentes*/
+        *{border: 2px solid black;}
+
+        /*Seletor do elemento*/
+        li, .churras#item3{color:black;}
+        /*padding define a margem entre o conteudo e a borda*/
+        /*border define a borda/margem (espessura, cor, estilo) */
+        /*outline não faz parte do cod não é computado como parte do programa html*/
+        /*outline-offset*/
+        p{
+            color: white;
+            padding: 15px;
+            border-style: groove;
+            border-color: blueviolet;
+            border-width: 25px;
+            background-color: rebeccapurple;
+ 
+        }
+
+        /*seletor por id*/
+        #p4{color:white;}
+
+        /*seletor por classe - peso maior*/
+        .churras{ 
+            background-color: brown;
+                        color: rgb(255, 0, 0);
+                    padding: 20px;}
+
+    </style>
+</head>
+<body>
+    <p id="p1">Jão Pedro </p>
+    <p id="p2">Antonio </p>
+    <p id="p3">Ana clara</p>
+    <p id="p4">Ana Beatriz</p>
+
+    <ul>
+        <li id="item1" class="churras"> Picanha</li>
+        <li id="item2" class="churras"> Linguiça</li>
+        <li id="item3" class="churras"> Queijo Coalho</li>
+        <li id="item4" class="churras"> Pão de Alho</li>
+        <li id="item5" class="churras"> Carvão</li>
+    
+    </ul>
+
+
+</body>
+</html>

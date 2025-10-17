@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>*{border: 2px solid rebeccapurple;
+    img{
+        float: right;
+    }}
+    html,body{border-color: red;}
+    /*display (valores): inline - não define altura - block - não é linear - , inline-block - consegue definir os dois, segue um fluxo - */
+    /* static segue o fluxo padrão
+
+     relative permite vc redimencionar de acordo com: top, bottom, right, left. com base na posição static dele
+
+     absulut: ele se posiona em relação ao primeiro ancestral não static; caso não tenha um anscestral ele se relaciona ao primeiro ancestral não static que ele encontrar cria uma nova ordem de exibição(nova camada) (usa top, bottom, left, right)
+
+     fixed o elemento fica posicionado em relação ao viewport VP*/
+    .box{display: inline-block; 
+         width: 100px;
+         height: 120px;
+         font-size: 30pt;
+        position: static;}
+    #box2{position: relative;
+          top: 30px;}
+    #box3 {position: absolute; 
+            top: 50px;
+        }
+    .conteiner{
+        position: relative;
+    }
+    #box4{
+        position: fixed;
+        background-color: darkcyan;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    </style>
+  
+    <title>Document</title>
+</head>
+<body>
+    <h1> TITULO</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur blanditiis voluptatibus sequi ab quasi, eum, animi odit cupiditate numquam vel, necessitatibus inventore incidunt. Beatae quas blanditiis ratione, asperiores exercitationem facilis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iste quisquam dolore provident molestiae porro ea repellat error ullam, nemo modi ipsa expedita, cum corrupti aut quis accusamus veritatis praesentium!</p>
+
+    <img src="imgs/caverna_dragao.jpg">
+
+    <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod fugiat facilis minus animi dolores sit itaque possimus, officiis blanditiis porro aspernatur fuga omnis atque id! Unde amet ipsa odio cum?</span>
+
+    <div class="conteiner"> 
+          <!--div#box$.box(box$)-->
+          <div id="box1" class="box">box1</div>
+          <div id="box2" class="box">box2</div>
+          <div id="box3" class="box">box3</div>
+          <div id="box4" class="box">box4</div>
+          <div id="box5" class="box">box5</div>
+    </div>
+   
+    
+</body>
+</html>
