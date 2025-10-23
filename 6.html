@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .container{display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+             /* Acompanha o fluxo do flex*/
+            /*space-arund todos ficam com espaços; 
+            space-between coloca os espaços somente nos espaços dos itens
+            do meio sem colocar na borda 
+            space-evenlin deica todos os itens com espaços IGUAIS*/
+            align-content: center;
+            align-items: center; /*acompanha o eixo contrario do flex*/
+            flex-wrap: wrap;
+            border: 1px solid black;
+            height: 100vh;
+        }
+            .box{flex-shrink: 0;}
+            
+            /*propriedade que diz que o
+            item não pode se reminesionar idependentemente de precisar ou não de espaço*/
+            
+            /*vai dar um
+            "peso" para o item*/
+        
+
+        .box{border: 1px solid rebeccapurple;
+            background-color: #AAAAAA;
+            display: block;
+            height: 100px;
+            width: 100px; 
+        
+        }
+        /* vh/dvh/lvh/svh pesquisar o que é e o porque de ter três;
+        vh é sobre a largura do viewport
+       */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+    </div>
+</body>
+</html>

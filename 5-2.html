@@ -10,11 +10,13 @@
     }}
     html,body{border-color: red;}
     /*display (valores): inline - não define altura - block - não é linear - , inline-block - consegue definir os dois, segue um fluxo - */
-    /* static segue o fluxo padrão
+    
+    /* static segue o fluxo padrão; criado para manter retrocompatibilidade 
 
      relative permite vc redimencionar de acordo com: top, bottom, right, left. com base na posição static dele
 
-     absulut: ele se posiona em relação ao primeiro ancestral não static; caso não tenha um anscestral ele se relaciona ao primeiro ancestral não static que ele encontrar cria uma nova ordem de exibição(nova camada) (usa top, bottom, left, right)
+     absulut: ele se posiona em relação ao primeiro ancestral não static; caso não tenha um anscestral ele se relaciona ao 
+      primeiro ancestral não static que ele encontrar cria uma nova ordem de exibição(nova camada) (usa top, bottom, left, right)
 
      fixed o elemento fica posicionado em relação ao viewport VP*/
     .box{display: inline-block; 
@@ -33,6 +35,7 @@
     #box4{
         position: fixed;
         background-color: darkcyan;
+        transform: :translate(+50,-50%);
         right: 10px;
         bottom: 10px;
     }
