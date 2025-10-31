@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    body{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 4rem;
+    }
+    
+           #foguete{
+            animation: subir 5s ease-in-out infinite;
+                font-size: 100px;
+        }
+        @keyframes subir {
+            0% {
+                transform: translateY(100svh) rotate (0deg) ;
+            }
+         
+            100%{
+                transform: translateY(0svh) rotate (360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="foguete">🚀</div>
+
+</body>
+</html>
