@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-size: 45px;
+            color: red;
+            background-color: antiquewhite;
+        }
+        #Seletor{
+            color: rgb(171, 115, 243);
+            border: groove 10px;
+            border-color: rgb(0, 255, 13);
+            background-color: black
+        }
+        #Propriedades{
+            color: rgb(247, 179, 8);
+            background-color: rgb(100, 0, 92);
+            border: double 12px;
+        }
+        #Valores{
+            color: rgb(30, 168, 210);
+            font-style: initial;
+            font-size: large 18px
+        }
+        
+        .box{
+            display: block;
+            height: 200px;
+            width: 200px;
+        }
+        #box1{
+            background-color: blue;
+        }
+        #box1{
+            animation: subir 10s ease-in-out infinite;
+            font-size: 100px;
+        }
+        @keyframes subir {
+            0%{
+                transform: translateY(100svh) rotate(0deg);
+            }
+            100%{
+                transform: translateY(0svh) rotate(360deg);
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Regra CSS</h2>
+    <p id="Seletor"> Seletor: Nome da tag a ser posta a regra
+        Ex: p (paragrafo)
+    </p>
+    <br>
+    <p id="Propriedades">
+       Propriedade: a função que vai ser responsável
+       por estilizar a tag
+       Ex: border (Adiciona borda)
+    </p>
+    <br>
+    <p id="Valores">
+        Valores: Quantifica quanto (proporção, intensidade etc) 
+        a propriedade vai ser aplicada na tag
+        Ex: Font-size 18px
+    </p>  
+    <br>
+    <br>
+
+    <h1>Animação</h1>
+    <div class="conteiner">
+
+        <div id="box1" class="box"></div>
+
+    </div>
+    
+</body>
+</html>
