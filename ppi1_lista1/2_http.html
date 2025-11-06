@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <style>
+        img{width: 500px;}
+        table, th, td{border: 1px solid black; border-collapse: collapse;}
+    </style>
+</head>
+<!--Questão A-->
+<body>
+    <h1>O que é o protocolo HTTP?</h1>
+    <p><em>HyperText Transfer Protocol</em> 
+    é o conjunto de regras que definem a comunicação
+    na WEB onde define como o <strong>navegador</strong>
+    pede e como o <strong>servidor</strong> entrega 
+    as páginas da Web</p>
+    <div> 
+        <img src="https://mazer.dev/pt-br/http/introducao-protocolo-http/webflow-request-response.png"
+        alt="Funcionamento do protocolo">
+    </div>
+    <br>
+    <br>
+    <h1>Como é usado na Web?</h1>
+    <p>O cliente <i>navegador</i> faz uma requisição.
+    O servidor recebe esse pedido e envia uma resposta 
+    HTTP, que pode ser:</p>
+    <ul>
+        <li>o códido HTML da página</li>
+        <li>uma imagem</li>
+        <li>um erro (como "404 Not Found")</li>
+    </ul>
+<!--Questão B-->
+<br>
+<br>
+    <h1>Exemplos de requisição e resposta</h1> 
+    <h4>Resumo</h4>
+    <p>O request contém o método, cabeçalhos e dados enviados pelo cliente.
+    O response traz o código de status, cabeçalhos e o conteúdo retornado pelo servidor.</p>
+     <br>
+     <br>
+     <table>
+        <tr>
+            <th>campo</th>
+            <th>função</th>
+        </tr>
+        <tr>
+            <td>Método</td>
+            <td>Indica o tipo de ação: GET, POST, PUT, DELETE</td>
+        </tr>
+        <tr>
+            <td>Caminho</td>
+            <td>Mostra qual recurso está sendo pedido</td>
+        </tr>
+        <tr>
+            <td>Versão do protocolo</td>
+            <td>Indica a versão do HTTP usada</td>
+        </tr>
+        <tr>
+            <td>Host</td>
+            <td>Nome do servidor (domínio) que está sendo acessado.</td>
+        </tr>
+     </table>
+     <br>
+     <img src="https://softuni.org/wp-content/uploads/2022/07/HTTP-Requests-Example.png" alt="Requisitos">
+     <br>
+     <br>
+     <table>
+        <tr>
+            <th>campo</th>
+            <th>função</th>
+        </tr>
+        <tr>
+            <td>Status Line</td>
+            <td>Mostra a versão do HTTP, o código e a mensagem</td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>Data e hora em que o servidor respondeu.</td>
+        </tr>
+        <tr>
+            <td>Server</td>
+            <td>Identifica o tipo e versão do servidor</td>
+        </tr>
+        <tr>
+            <td>Content-Type</td>
+            <td>Tipo de conteúdo enviado</td>
+        </tr>
+     </table>
+     <br>
+     <br>
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRinD73ItnsGKTVHyTxWgxtlwLZu4RIfjy1gQ&s" alt="Reposta">
+
+</body>
+</html>
