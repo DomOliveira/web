@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>   
+   <meta charset="UTF-8">
+   <title>Exemplo especificidade de seletores</title>
+
+   <style>
+      /* Regra 1: todos os <li> ficam vermelhos */
+      li { color: red; }
+
+      /* Regra 2: itens com classe .churras ficam verdes */
+      .churras { color: green; }
+
+      /* Regra 3: itens com classe .fruta ficam cinza */
+      .fruta { color: gray; }
+
+      /* Regra 4: um <li> com classe .churras que vem logo depois de outro <li> fica preto */
+      li + li.churras { color: black; }
+
+      /* Regra 5: um elemento .churras que tenha o atributo draggable="true" fica magenta */
+      .churras[draggable="true"] { color: magenta; }
+
+      /* Regra 6: itens com IDs lip1, lip2 ou lip3 ficam azuis */
+      #lip1, #lip2, #lip3 { color: blue; }
+
+      /* Regra 7: um item com ID lip3 e classe .fruta fica laranja */
+      #lip3.fruta { color: orange; }
+
+      /* Regra 8: um item dentro de <ol> com classe .churras e ID lip5 ficaria roxo */
+      ol > li.churras#lip5 { color: purple; }
+   </style>
+</head>
+
+<body>   
+   <h2>Exemplo de especificidade de seletores CSS</h2>
+   <p>Veja como cada regra afeta os itens da lista:</p>
+
+   <ol>
+      <!-- Item 1 → só tem regra 1 (li), cor: vermelho -->
+      <li id="lip0">Abacaxi</li>
+
+      <!-- Item 2 → tem .fruta, cor: cinza -->
+      <li class="fruta">Melão</li>
+
+      <!-- Item 3 → tem .fruta e #lip2, ID vence → cor azul -->
+      <li id="lip2" class="fruta">Pera</li>
+
+      <!-- Item 4 → tem .fruta e #lip3, e existe regra #lip3.fruta → cor laranja -->
+      <li id="lip3" class="fruta">Uva</li>
+
+      <!-- Item 5 → tem .fruta → cor cinza -->
+      <li id="lip4" class="fruta">Maçã</li>
+
+      <!-- Item 6 → tem .churras → cor verde -->
+      <li class="churras">Carne</li>
+
+      <!-- Item 7 → vem logo após outro <li> e tem .churras → regra 4 (preto) -->
+      <li class="churras">Linguiça</li>
+
+      <!-- Item 8 → tem .churras e draggable="true" → regra 5 (magenta) -->
+      <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+   </ol>
+</body>
+</html>
