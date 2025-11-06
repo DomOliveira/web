@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joana Barbosa — Currículo</title>
+  <style>
+    :root{
+      --sidebar:#2f3a40;
+      --muted:#6b6b6b;
+      --accent:#e9ecef;
+      --main-bg:#ffffff;
+      --line:#dcdcdc;
+      --name-color:#222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--main-bg);color:var(--name-color);}
+
+    .container{max-width:980px;margin:28px auto;display:flex;gap:28px;padding:28px}
+    /* Sidebar */
+    .sidebar{width:260px;background:var(--sidebar);color:var(--accent);padding:28px;border-radius:8px;flex-shrink:0}
+    .photo{width:120px;height:120px;border-radius:999px;overflow:hidden;margin:0 auto 18px;box-shadow:0 6px 14px rgba(0,0,0,0.25)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .section-title{font-weight:700;margin:10px 0 8px;color:var(--accent);font-size:14px;text-transform:uppercase;letter-spacing:0.6px}
+    .info{font-size:14px;line-height:1.45;color:var(--accent);}    
+    .info .label{display:block;color:rgba(255,255,255,0.7);font-size:12px;margin-top:8px}
+
+    /* Main */
+    .main{flex:1;background:#fff;padding:18px 24px;border-radius:8px}
+    .header{display:flex;align-items:flex-start;gap:18px;border-bottom:1px solid var(--line);padding-bottom:18px}
+    .name{font-size:28px;font-weight:700;margin:6px 0}
+    .summary{color:var(--muted);font-size:14px;line-height:1.6}
+
+    .content{padding-top:18px}
+    h3{margin:14px 0 10px;font-size:18px}
+    .job{margin-bottom:14px}
+    .job .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+    .job ul{margin:8px 0 0;padding-left:18px}
+    .divider{height:1px;background:var(--line);margin:12px 0}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .container{flex-direction:column;padding:16px}
+      .sidebar{width:100%;display:flex;align-items:center;gap:18px}
+      .photo{margin:0}
+      .header{flex-direction:column;align-items:flex-start}
+    }
+
+    /* Small print block on sidebar */
+    .small{font-size:13px;color:rgba(255,255,255,0.9);margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="photo">
+        <!-- imagem fornecida -->
+        <img src="https://forbes.com.br/wp-content/uploads/2022/07/lideranca-feminina-forbesmulher.jpg" alt="Joana Barbosa" />
+      </div>
+      <div style="text-align:center;font-weight:700;font-size:18px;color:var(--accent)">Pessoal</div>
+      <div class="info">
+        <span class="label">Nome</span>
+        <div class="small">Joana Barbosa</div>
+
+        <span class="label">Endereço</span>
+        <div class="small">Rua da Paz, 250<br/>7100-011 Lisboa</div>
+
+        <span class="label">Número de telefone</span>
+        <div class="small">(00) 90000-0000</div>
+
+        <span class="label">Email</span>
+        <div class="small">exemplo@umaker.pt</div>
+
+        <span class="label">Interesses</span>
+        <div class="small">Marketing digital, SEO, Conteúdo</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <div style="flex:1">
+          <div class="name">Joana Barbosa</div>
+          <div style="height:8px"></div>
+          <div class="summary">Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais. Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões interpessoais e trabalho bem sobre pressão de forma a atingir os objetivos.</div>
+        </div>
+        <div style="width:140px;text-align:right;color:var(--muted);font-size:13px">&nbsp;</div>
+      </header>
+
+      <section class="content">
+        <h3>Experiência profissional</h3>
+
+        <article class="job">
+          <div class="meta"><div><strong>Junior SEO Marketer</strong> — Cyanca, Lisboa</div><div>2017 - 2019</div></div>
+          <ul>
+            <li>Página on/off SEO</li>
+            <li>Estratégias de linkbuilding</li>
+            <li>Criação de conteúdo relevante</li>
+            <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Adwords</li>
+          </ul>
+        </article>
+
+        <div class="divider"></div>
+
+        <article class="job">
+          <div class="meta"><div><strong>Assistente de Vendas</strong> — Sális, Lisboa</div><div>2015 - 2016</div></div>
+          <ul>
+            <li>Contribuição para os objetivos de vendas</li>
+            <li>Gestão de inventário</li>
+            <li>Apoio a clientes</li>
+          </ul>
+        </article>
+
+        <!-- Espaço para outras seções: Educação, Habilidades, Línguas -->
+        <div class="divider"></div>
+
+        <h3>Habilidades</h3>
+        <p class="summary">SEO, Marketing de Conteúdo, Google Analytics, Gestão de Projectos.</p>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>
