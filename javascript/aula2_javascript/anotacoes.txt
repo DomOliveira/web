@@ -1,0 +1,19 @@
+/*let paragrafo=document.createElement("p");
+        paragrafo.innerHTML="Olá Mundão";
+        pragrafo.style.fontSize=34
+        paragrafo.id="p01";
+        paragrafo.style.color="#FF0000";
+
+        document.body.appendChild(paragrafo);*/
+
+
+
+
+///tipos e variaveis
+
+        let i=1 //define uma variavel i numerica
+        var a= 1// define uma variavel a numerica
+        const pi = 3,141516 // define uma variavel constante
+
+
+um fetch retorna uma promisse 
