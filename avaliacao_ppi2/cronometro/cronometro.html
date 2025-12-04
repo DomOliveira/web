@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="stylesheet" href="cronometro.css" class="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> 
+    <title>Cronometro</title>
+</head>
+<body>
+    <div id="stopwatch">
+    <h2 id="timer">
+        00:00:00:00
+    </h2>
+    <div id="actions">
+        <!--botão de reiniciar a contagem-->
+        <button id="reset">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <!--botão de iniciar a contagem-->
+        <button id="power" action="start">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <!--botão de marcar a contagem-->
+        <button id="mark">
+            <i class="fa-solid fa-flag"></i>
+        </button>
+    </div>
+
+    <div id="marks-list"></div></div>
+
+
+    <script src="cronometro.js"></script>
+</body>
+</html>
