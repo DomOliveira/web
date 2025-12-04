@@ -63,9 +63,6 @@ body{
 
 #marks-list{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     gap: 0.7rem;
     flex-direction: column;
     color: white;

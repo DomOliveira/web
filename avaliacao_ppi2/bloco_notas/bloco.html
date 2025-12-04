@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloco de notas</title>
-
+    <link rel="stylesheet" href="bloco.css">
+    <title>Bloco de Notas</title>
 </head>
 <body>
-    
+    <h1>Bloco de Notas</h1>
+
+    <div class="container">
+        <div class="box">
+            <input type="text" name="nome" id="titulo" placeholder="Título">
+            <textarea id="mensagem" placeholder="Digite seu Texto..."></textarea>
+        </div>
+    </div>
+    <button id="botaoSalvar">Salvar Nota</button>
+    <div id="lista-notas">
+        <h2>Minhas Anotações</h2>
+    </div>
+    <script src="bloco.js"></script>
 </body>
 </html>

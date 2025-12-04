@@ -1,0 +1,143 @@
+ /* Centralizar o conteúdo principal*/
+        body{
+            background-color: #f0f0f0; 
+            margin: 0;
+            padding: 20px;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Personalizar os Títulos*/
+        h1, h2{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        /* Centralizar os blocos*/
+        .container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        /* Estilo do Bloco de notas*/
+        .box{
+            width: 500px;
+            height: 600px;
+            padding: 20px;
+            background-color: #ce59ee;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex; 
+            flex-direction: column;
+        }
+        /* Design do campo para escrever a mensagem*/
+        #mensagem{
+            flex-grow: 1;
+            min-height: 200px;
+            background-color: #f4cdff;
+            font-size: 16px;
+            resize: none;
+            overflow: auto;
+            border: none; 
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+            outline: none;
+        }
+        /* Design para o campo dos título*/
+        #titulo{
+            background-color: #f4cdff;
+            border: none;
+            padding: 5px 0;
+            height: auto;
+            font-size: 20px;
+            font-weight: bold; 
+            margin-bottom: 15px;
+            border-bottom: 2px solid #aaa;
+            font-family: 'Courier New', Courier, monospace;
+            outline: none;
+        }
+        /* Design do botão*/
+        button {
+            background-color: #666;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Mudança da cor do botão ao passar o mouse*/
+        button:hover {
+            background-color: #444;
+        }
+        /* Design referente ao texto que aparece de fundo nas caixas de texto*/
+        ::placeholder{
+            color: #999;
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Estilo para o local que irá aparecer as notas salvas*/
+        #lista-notas {
+        width: 540px;
+        margin-top: 40px;
+        padding: 10px 0;
+        text-align: center;
+        }
+        #lista-notas h2 {
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+        /* Design do bloco da nota salva*/
+        .nota-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: #fff; 
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.2s;
+        }
+        /* mudança de cor no bloco da nota salva*/
+        .nota-item:hover {
+            background-color: #f7f7f7;
+        }
+        
+        .nota-header {
+            flex-grow: 1;
+            text-align: left;
+            cursor: pointer;
+        }
+        /* Estilo do título da nota salva*/
+        .nota-header h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Estilo da data*/
+        .nota-item span {
+            font-size: 12px;
+            color: #888;
+            margin-right: 15px;
+            font-family: Arial, sans-serif;
+        }
+        /* Estilo dos botões de exclusão e edição*/
+        .nota-acoes button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            margin-top: 0; 
+        }
+        /* cores dos botões de Edição e Exclusão*/
+        .btn-editar { 
+            background-color: #007bff;
+        }
+        .btn-excluir { 
+            background-color: #dc3545;
+        }
+        /* Cores alternadas quando passado o mouse emcima*/
+        .btn-editar:hover { background-color: #0056b3; }
+        .btn-excluir:hover { background-color: #c82333; }
