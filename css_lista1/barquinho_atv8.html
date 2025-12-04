@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barquinho Animado</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      background: linear-gradient(to bottom, #bde0fe 0%, #a2d2ff 60%, #0077ff 60%, #0077ff 100%);
+      position: relative;
+    }
+
+    /* 🌊 Mar com efeito de ondas */
+    .mar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: #0077ff;
+      overflow: hidden;
+    }
+
+    .mar::before, .mar::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -100%;
+      left: -50%;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 10%, transparent 11%) repeat;
+      background-size: 80px 80px;
+      animation: ondas 6s linear infinite;
+      opacity: 0.3;
+    }
+
+    .mar::after {
+      animation-duration: 10s;
+      opacity: 0.2;
+    }
+
+    @keyframes ondas {
+      from { transform: translateX(0); }
+      to { transform: translateX(-80px); }
+    }
+
+    /* 🚤 Barquinho */
+    .barco {
+      position: absolute;
+      bottom: 30%;
+      width: 100px;
+      height: 100px;
+
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: navegar 12s linear infinite, balancar 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes navegar {
+      0% { left: -120px; }
+      100% { left: 100%; }
+    }
+
+    @keyframes balancar {
+      from { transform: rotate(-3deg); }
+      to { transform: rotate(3deg); }
+    }
+
+    /* ☁️ Nuvem */
+    .nuvem {
+      position: absolute;
+      top: 15%;
+      left: 200px;
+      width: 100px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 30px 10px 0 0 #fff, 60px 0 0 0 #fff;
+      animation: moverNuvem 40s linear infinite;
+    }
+
+    @keyframes moverNuvem {
+      0% { left: -200px; }
+      100% { left: 110%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nuvem"></div>
+ <div class="box" id="barco">🛥️</div>
+  <div class="mar"></div>
+</body>
+</html>

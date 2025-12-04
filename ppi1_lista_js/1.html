@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title id="title-aba">O que é JavaScript?</title>
+  <style id="style-main">
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; max-width: 900px; margin: 40px auto; line-height: 1.6; padding: 0 16px; }
+    header { margin-bottom: 20px; }
+    pre { background: #577a5f; padding: 12px; overflow:auto; }
+    .example { border-left:4px solid #e79931; padding:8px 12px; background:#bbefec; }
+  </style>
+</head>
+<body id="body-root">
+  <header id="header-main">
+    <h1 id="h1-titulo">O que é JavaScript?</h1>
+  </header>
+
+  <section id="sec-motivacao">
+    <p id="p-motivacao">Motivação para a criação do JavaScript: JavaScript foi criado no final da década de 1990 para tornar páginas web estáticas interativas. Enquanto HTML estrutura conteúdo e CSS cuida do visual, JavaScript foi pensado para permitir comportamento dinâmico — responder a cliques, validar formulários, atualizar partes da página sem recarregar, animar elementos e muito mais. A ideia era dar aos desenvolvedores uma linguagem leve que rodasse diretamente no navegador do usuário.</p>
+  </section>
+
+  <section id="sec-execucao">
+    <p id="p-diferenca">Diferença entre execução no navegador e no servidor: Historicamente JavaScript rodava apenas no navegador (client-side), onde interage com a página e a interface do usuário. Com o surgimento do Node.js, JavaScript também passou a rodar no servidor (server-side). No navegador, o código tem acesso a APIs específicas como <code>document</code> (DOM) e ao modelo de eventos do navegador; no servidor, o ambiente fornece APIs de sistema de arquivos, rede, e processos—mas não há DOM nem <code>document</code>.</p>
+  </section>
+
+  <section id="sec-sandbox">
+    <p id="p-sandbox">Conceito de <em>sandbox</em> no navegador: O sandbox é um ambiente restrito onde o código do navegador é executado para proteger o usuário. Isso significa que scripts em páginas web não podem, por exemplo, ler livremente arquivos do disco do usuário ou acessar recursos sensíveis fora das permissões definidas. O navegador isola (sandbox) cada origem (domínio) e aplica regras de segurança como CORS, políticas de mesma origem e permissões para APIs sensíveis (microfone, câmera, geolocalização).</p>
+  </section>
+
+  <section id="sec-objetos-globais">
+    <p id="p-globais">Objetos globais comuns: no ambiente do navegador existem objetos e funções disponíveis globalmente, por exemplo:
+      <ul id="ul-globais">
+        <li id="li-document"><code>document</code> — representa o DOM (a página) e permite consultar e manipular elementos HTML.</li>
+        <li id="li-console"><code>console</code> — usado para registrar mensagens de depuração no console do desenvolvedor (ex.: <code>console.log()</code>).</li>
+        <li id="li-alert"><code>alert()</code> — exibe uma caixa de diálogo simples com uma mensagem para o usuário.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section id="sec-exemplos">
+    <h2 id="h2-exemplos">Exemplos práticos</h2>
+
+    <div class="example" id="ex-console">
+      <p id="p-ex-console">Exemplo: registrar uma mensagem no console usando <code>console.log()</code>:</p>
+      <pre id="pre-console">console.log('Olá do console!');</pre>
+    </div>
+
+    <div class="example" id="ex-alert">
+      <p id="p-ex-alert">Exemplo: exibir uma saudação com <code>alert()</code>. Esta chamada será executada quando a página for carregada.</p>
+      <pre id="pre-alert">alert('Olá! Bem-vindo(a) à página sobre JavaScript.');</pre>
+    </div>
+
+    <div class="example" id="ex-hora">
+      <p id="p-ex-hora">Exemplo: exibir a hora atual em um parágrafo usando <code>document.getElementById().innerHTML</code>:</p>
+      <pre id="pre-hora">document.getElementById('p-hora').innerHTML = 'Hora atual: ' + new Date().toLocaleString();</pre>
+    </div>
+
+    <p id="p-hora">Hora atual: (a página irá preencher este campo ao carregar)</p>
+  </section>
+
+  <footer id="footer-nota">
+    <p id="p-nota-final">Nota: os exemplos acima são intencionais e simples para aprendizado. Em projetos reais prefira práticas como evitar <code>alert()</code> para UX, usar ferramentas de logging estruturado, e considerar frameworks e bundlers quando a aplicação crescer.</p>
+  </footer>
+
+  <script id="script-main">
+    // Registrar mensagem no console
+    console.log('JavaScript carregado: exemplo de console.log()');
+
+    // Exibir saudação ao carregar a página
+    window.addEventListener('load', function () {
+      alert('Olá! Bem-vindo(a)');
+
+      // Atualizar o parágrafo com a hora atual
+      var pHora = document.getElementById('p-hora');
+      if (pHora) {
+        pHora.innerHTML = 'Hora atual: ' + new Date().toLocaleString();
+      } else {
+        console.warn('Elemento com id "p-hora" não encontrado.');
+      }
+    });
+  </script>
+</body>
+</html>
